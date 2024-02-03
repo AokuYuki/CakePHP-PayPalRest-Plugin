@@ -80,9 +80,12 @@ class OrdersController extends AppController {
 }
 ```
 
-To receive the payment notifications in your app the Plugin expects 3 event handlers
+To receive the payment notifications in your app the Plugin expects 3 event handlers.
 
 ```php
+/*
+ * In CakePHP Bootstrap
+ */
 
 $payPalPayments = TableRegistry::getTableLocator()->get('PayPal.PayPalPayments');
 $eventManager = $payPalPayments->getEventManager();
